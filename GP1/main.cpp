@@ -130,13 +130,34 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	spriteBkgd.setTexture(textureBkgList[0]->getTexture());
 	spriteBkgd.setTextureDimensions(textureBkgList[0]->getTWidth(), textureBkgList[0]->getTHeight());
 
-	spriteBkgd.setSpritePos(glm::vec2(0.0f, 0.0f));
-	spriteBkgd.setTexture(textureBkgList[1]->getTexture());
-	spriteBkgd.setTextureDimensions(textureBkgList[1]->getTWidth(), textureBkgList[1]->getTHeight());
+	cBkGround spriteStartBkgd;
+	spriteStartBkgd.setSpritePos(glm::vec2(0.0f, 0.0f));
+	spriteStartBkgd.setTexture(textureBkgList[1]->getTexture());
+	spriteStartBkgd.setTextureDimensions(textureBkgList[1]->getTWidth(), textureBkgList[1]->getTHeight());
 
-	spriteBkgd.setSpritePos(glm::vec2(0.0f, 0.0f));
-	spriteBkgd.setTexture(textureBkgList[2]->getTexture());
-	spriteBkgd.setTextureDimensions(textureBkgList[2]->getTWidth(), textureBkgList[2]->getTHeight());
+	cBkGround spriteEndBkgd;
+	spriteEndBkgd.setSpritePos(glm::vec2(0.0f, 0.0f));
+	spriteEndBkgd.setTexture(textureBkgList[2]->getTexture());
+	spriteEndBkgd.setTextureDimensions(textureBkgList[2]->getTWidth(), textureBkgList[2]->getTHeight());
+
+	//Vector array for button textures
+	vector<cTexture*> btnTextureList;
+	LPCSTR btnTexturesToUse[] = { "Images/Buttons/exitBtn.png", "Images/Buttons/playBtn.png" };
+	for (int tCount = 0; tCount < 2; tCount++)
+	{
+		btnTextureList.push_back(new cTexture());
+		btnTextureList[tCount]->createTexture(btnTexturesToUse[tCount]);
+	}
+
+	cButton exitButton;
+	exitButton.attachInputMgr(theInputMgr);
+	exitButton.setTexture(btnTextureList[0]->getTexture());
+	exitButton.setTextureDimensions(btnTextureList[0]->getTWidth(), btnTextureList[0]->getTHeight());
+
+	cButton playButton;
+	playButton.attachInputMgr(theInputMgr);
+	playButton.setTexture(btnTextureList[1]->getTexture());
+	playButton.setTextureDimensions(btnTextureList[1]->getTWidth(), btnTextureList[1]->getTHeight());
 
 	cTexture rocketTxt;
 	rocketTxt.createTexture("Images\\chicken.png");
@@ -156,6 +177,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	string outputMsg;
 	string strMsg[] = { "Chicken Run", "Score:", "Use the Arrow Keys to move", "Spacebar to Fire", "Get the foxes!" };
 
+	gameState theGameState = MENU;
+	btnTypes theBtnType = EXIT;
+
 
     //This is the mainloop, we render frames until isRunning returns false
 	while (pgmWNDMgr->isWNDRunning())
@@ -168,38 +192,123 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		spriteBkgd.render();
 
-		rocketSprite.update(elapsedTime);
-
-		vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin();
-		while (asteroidIterator != theAsteroids.end())
+		switch (theGameState)
 		{
-			if ((*asteroidIterator)->isActive() == false)
+		case MENU:
+			spriteStartBkgd.render();
+			
+			playButton.setSpritePos(glm::vec2(400.0f, 500.0f));
+			exitButton.setSpritePos(glm::vec2(500.0f, 500.0f));
+			playButton.render();
+			exitButton.render();
+
+			theGameState = playButton.update(theGameState, PLAYING);
+			exitButton.update();
+
+			outputMsg = strMsg[2];
+			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 250.0f, 0.0f));
+			outputMsg = strMsg[3];
+			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 350.0f, 0.0f));
+			outputMsg = strMsg[4];
+			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 450.0f, 0.0f));
+
+			//Play theme music
+			theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
+
+			if (exitButton.getClicked())
 			{
-				asteroidIterator = theAsteroids.erase(asteroidIterator);
+				SendMessage(pgmWNDMgr->getWNDHandle(), WM_CLOSE, NULL, NULL);
 			}
-			else
+			break;
+
+		case PLAYING:
+			spriteBkgd.render();
+
+			rocketSprite.update(elapsedTime);
+
+			vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin();
+			while (asteroidIterator != theAsteroids.end())
 			{
-				(*asteroidIterator)->update(elapsedTime);
-				(*asteroidIterator)->render();
-				++asteroidIterator;
+				if ((*asteroidIterator)->isActive() == false)
+				{
+					asteroidIterator = theAsteroids.erase(asteroidIterator);
+				}
+				else
+				{
+					(*asteroidIterator)->update(elapsedTime);
+					(*asteroidIterator)->render();
+					++asteroidIterator;
+				}
 			}
+
+			rocketSprite.render();
+			outputMsg = strMsg[0];
+			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(0.0f, 50.0f, 0.0f));
+			outputMsg = strMsg[1];
+			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(450.0f, 50.0f, 0.0f));
+
+			//Play theme music
+			theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
+
+			exitButton.setSpritePos(glm::vec2(740.0f, 600.0f));
+			exitButton.render();
+			theGameState = exitButton.update(theGameState, END);
+
+			break;
+
+		case END:
+			spriteEndBkgd.render();
+
+			playButton.setClicked(false);
+			exitButton.setClicked(false);
+
+			playButton.setSpritePos(glm::vec2(400.0f, 500.0f));
+			exitButton.setSpritePos(glm::vec2(500.0f, 500.0f));
+			playButton.render();
+			exitButton.render();
+
+			theGameState = playButton.update(theGameState, PLAYING);
+			exitButton.update();
+
+			if (exitButton.getClicked())
+			{
+				SendMessage(pgmWNDMgr->getWNDHandle(), WM_CLOSE, NULL, NULL);
+			}
+			break;
+
 		}
 
+		//rocketSprite.update(elapsedTime);
+
+		//vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin();
+		//while (asteroidIterator != theAsteroids.end())
+		//{
+		//	if ((*asteroidIterator)->isActive() == false)
+		//	{
+		//		asteroidIterator = theAsteroids.erase(asteroidIterator);
+		//	}
+		//	else
+		//	{
+		//		(*asteroidIterator)->update(elapsedTime);
+		//		(*asteroidIterator)->render();
+		//		++asteroidIterator;
+		//	}
+		//}
+
 		//Render rocket(Chicken) sprite and output text arrays
-		rocketSprite.render();
-		outputMsg = strMsg[0];
-		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(0.0f, 50.0f, 0.0f));
-		outputMsg = strMsg[1];
-		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(450.0f, 50.0f, 0.0f));
-		outputMsg = strMsg[2];
-		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 250.0f, 0.0f));
-		outputMsg = strMsg[3];
-		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 350.0f, 0.0f));
-		outputMsg = strMsg[4];
-		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 450.0f, 0.0f));
+		//rocketSprite.render();
+		//outputMsg = strMsg[0];
+		//theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(0.0f, 50.0f, 0.0f));
+		//outputMsg = strMsg[1];
+		//theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(450.0f, 50.0f, 0.0f));
+		//outputMsg = strMsg[2];
+		//theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 250.0f, 0.0f));
+		//outputMsg = strMsg[3];
+		//theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 350.0f, 0.0f));
+		//outputMsg = strMsg[4];
+		//theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(300.0f, 450.0f, 0.0f));
 		
-		//Play theme music
-		theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
+		
 
 		pgmWNDMgr->swapBuffers();
 		theInputMgr->clearBuffers(theInputMgr->KEYS_DOWN_BUFFER | theInputMgr->KEYS_PRESSED_BUFFER);

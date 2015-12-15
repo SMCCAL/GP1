@@ -60,6 +60,9 @@
     <ClCompile Include="cRocket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asteroidsGame.h">
@@ -110,7 +113,7 @@
     <ClInclude Include="windowOGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="cButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

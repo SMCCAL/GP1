@@ -32,6 +32,7 @@
 #include <algorithm>
 // Textures & Sprites
 #include "cTexture.h"
+#include "cSprite.h"
 #include <fstream>
 
 
@@ -41,6 +42,6 @@ using namespace std;
 #define WINDOW_TITLE "Chicken Run"
 
 // This header file contains all the constants & enumarated types for the game
-enum gameState { MENU, INSTRUCTIONS, CREATEMAZE, PLAYING, END };
-enum btnTypes { EXIT, INSTRUCT, LOAD, PLAY, SAVE, SETTINGS };
+enum gameState { MENU, PLAYING, END };
+enum btnTypes { EXIT, PLAY };
 #endif
