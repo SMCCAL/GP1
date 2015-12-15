@@ -1,2 +1,24 @@
-﻿  main.cpp
-  GP1.vcxproj -> C:\Users\Stephen\documents\visual studio 2015\Projects\GP1\Debug\GP1.exe
+﻿  cWNDManager.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2143: syntax error: missing ';' before '*'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(62): error C2061: syntax error: identifier 'cInputMgr'
+  cSoundMgr.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C2143: syntax error: missing ';' before '*'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(63): error C2061: syntax error: identifier 'cSoundMgr'
+  cSound.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2065: 'cSound': undeclared identifier
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2059: syntax error: '>'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2976: 'std::map': too few template arguments
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\map(72): note: see declaration of 'std::map'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C2143: syntax error: missing ';' before '*'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C2238: unexpected token(s) preceding ';'
+  cInputMgr.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2143: syntax error: missing ';' before '*'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(62): error C2061: syntax error: identifier 'cInputMgr'
+  Generating Code...

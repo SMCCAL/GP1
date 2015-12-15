@@ -119,8 +119,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	//vector array for background textures
 	vector<cTexture*> textureBkgList;
-	LPCSTR bkgTexturesToUse[] = { "Images/farmbg.png", "Images/farmStartbg.png", "Images/farmEndbg.png" };
-	for (int tCount = 0; tCount < 3; tCount++)
+	LPCSTR bkgTexturesToUse[] = { "Images\\farmbg.png", "Images\\farmStartbg.png", "Images\\farmEndbg.png" };
+	for (int tCount = 0; tCount < 4; tCount++)
 	{
 		textureBkgList.push_back(new cTexture());
 		textureBkgList[tCount]->createTexture(bkgTexturesToUse[tCount]);
@@ -142,8 +142,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	//Vector array for button textures
 	vector<cTexture*> btnTextureList;
-	LPCSTR btnTexturesToUse[] = { "Images/Buttons/exitBtn.png", "Images/Buttons/playBtn.png" };
-	for (int tCount = 0; tCount < 2; tCount++)
+	LPCSTR btnTexturesToUse[] = { "Images\\exitBtn.png", "Images\\playBtn.png" };
+	for (int tCount = 0; tCount < 3; tCount++)
 	{
 		btnTextureList.push_back(new cTexture());
 		btnTextureList[tCount]->createTexture(btnTexturesToUse[tCount]);
@@ -173,9 +173,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	// Attach sound manager to rocket sprite
 	rocketSprite.attachSoundMgr(theSoundMgr);
 
-	//int score = 0;
 	string outputMsg;
-	string strMsg[] = { "Chicken Run", "Score:", "Use the Arrow Keys to move", "Spacebar to Fire", "Get the foxes!" };
+	string strMsg[] = { "Chicken Runnnn", "Score:", "Use the Arrow Keys to move", "Spacebar to Fire", "Get the foxes!" };
 
 	gameState theGameState = MENU;
 	btnTypes theBtnType = EXIT;
@@ -190,13 +189,14 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		float elapsedTime = pgmWNDMgr->getElapsedSeconds();
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		spriteBkgd.render();
+
 
 		switch (theGameState)
 		{
-		case MENU:
+		case MENU: 
+		{
 			spriteStartBkgd.render();
-			
+
 			playButton.setSpritePos(glm::vec2(400.0f, 500.0f));
 			exitButton.setSpritePos(glm::vec2(500.0f, 500.0f));
 			playButton.render();
@@ -219,45 +219,47 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			{
 				SendMessage(pgmWNDMgr->getWNDHandle(), WM_CLOSE, NULL, NULL);
 			}
+		}
+		
 			break;
 
 		case PLAYING:
-			spriteBkgd.render();
+		{spriteBkgd.render();
 
 			rocketSprite.update(elapsedTime);
 
-			vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin();
+			{vector<cAsteroid*>::iterator asteroidIterator = theAsteroids.begin();
 			while (asteroidIterator != theAsteroids.end())
 			{
 				if ((*asteroidIterator)->isActive() == false)
 				{
-					asteroidIterator = theAsteroids.erase(asteroidIterator);
+					{asteroidIterator = theAsteroids.erase(asteroidIterator); }
 				}
 				else
 				{
-					(*asteroidIterator)->update(elapsedTime);
-					(*asteroidIterator)->render();
-					++asteroidIterator;
+					{(*asteroidIterator)->update(elapsedTime); (*asteroidIterator)->render(); ++asteroidIterator; }
 				}
 			}
+			}
 
-			rocketSprite.render();
-			outputMsg = strMsg[0];
-			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(0.0f, 50.0f, 0.0f));
-			outputMsg = strMsg[1];
-			theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(450.0f, 50.0f, 0.0f));
+		rocketSprite.render();
+		outputMsg = strMsg[0];
+		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(0.0f, 50.0f, 0.0f));
+		outputMsg = strMsg[1];
+		theFontMgr->getFont("orange juice 2.0.ttf")->printText(outputMsg.c_str(), FTPoint(450.0f, 50.0f, 0.0f));
 
-			//Play theme music
-			theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
+		//Play theme music
+		theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
 
-			exitButton.setSpritePos(glm::vec2(740.0f, 600.0f));
-			exitButton.render();
-			theGameState = exitButton.update(theGameState, END);
+		exitButton.setSpritePos(glm::vec2(740.0f, 600.0f));
+		exitButton.render();
+		theGameState = exitButton.update(theGameState, END);
 
+		}
 			break;
 
 		case END:
-			spriteEndBkgd.render();
+		{	spriteEndBkgd.render();
 
 			playButton.setClicked(false);
 			exitButton.setClicked(false);
@@ -267,6 +269,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			playButton.render();
 			exitButton.render();
 
+			//Play theme music
+			theSoundMgr->getSnd("Theme")->playAudio(AL_TRUE);
+
 			theGameState = playButton.update(theGameState, PLAYING);
 			exitButton.update();
 
@@ -274,6 +279,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			{
 				SendMessage(pgmWNDMgr->getWNDHandle(), WM_CLOSE, NULL, NULL);
 			}
+		}
 			break;
 
 		}

@@ -29,6 +29,7 @@ public:
 	void render();		// Default render function
 	void render(int textureToRender);		// Default render function
 	void update(float deltaTime);
+	void update();
 	void update(string fileName, string map);
 	gameState update(gameState theCurrentGameState, gameState newGameState);
 

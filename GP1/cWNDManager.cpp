@@ -247,6 +247,22 @@ LRESULT CALLBACK cWNDManager::WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARA
 		pInstance->m_InputMgr->keyDown(wParam);
 		return 0;
 	}
+	case WM_MOUSEMOVE:                      // mouse moved
+	{
+		pInstance->m_InputMgr->mouseXY(lParam);
+		return 0;
+	}
+	case WM_LBUTTONDOWN:                    // left mouse button down
+	{
+		pInstance->m_InputMgr->setLeftMouseBtn(true);
+		pInstance->m_InputMgr->mouseXY(lParam);             // mouse position
+		return 0;
+	}
+	case WM_LBUTTONUP:                      // left mouse button up
+	{
+		pInstance->m_InputMgr->setLeftMouseBtn(false);
+		return 0;
+	}
 
 		break;
 	default:
