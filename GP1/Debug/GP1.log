@@ -1,24 +1,116 @@
-﻿  cWNDManager.cpp
+﻿  main.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+  cWNDManager.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2143: syntax error: missing ';' before '*'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(62): error C2061: syntax error: identifier 'cInputMgr'
+  cTexture.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+  cSprite.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(106): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(107): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(180): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(182): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(184): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(206): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(241): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(242): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(243): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(244): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(301): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(313): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(314): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.cpp(315): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
   cSoundMgr.cpp
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C2143: syntax error: missing ';' before '*'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(38): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(63): error C2061: syntax error: identifier 'cSoundMgr'
   cSound.cpp
-c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2065: 'cSound': undeclared identifier
-c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2059: syntax error: '>'
-c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2976: 'std::map': too few template arguments
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\map(72): note: see declaration of 'std::map'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C2143: syntax error: missing ';' before '*'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(32): error C2238: unexpected token(s) preceding ';'
+  cRocket.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\crocket.cpp(23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\crocket.cpp(25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\crocket.cpp(27): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\crocket.cpp(29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
   cInputMgr.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2143: syntax error: missing ';' before '*'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(37): error C2238: unexpected token(s) preceding ';'
 c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csprite.h(62): error C2061: syntax error: identifier 'cInputMgr'
+  cFontMgr.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+  cFont.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cfont.cpp(69): warning C4244: 'argument': conversion from 'FTGL_DOUBLE' to 'GLfloat', possible loss of data
+  cButton.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(41): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(43): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(71): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(73): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbutton.cpp(75): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  cBullet.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(23): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(27): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(91): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(102): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(103): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(104): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\cbullet.cpp(105): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+  cBkGround.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+  cAsteroid.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(25): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(27): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(29): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(31): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(102): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(113): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(114): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(115): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\casteroid.cpp(116): warning C4244: 'argument': conversion from 'LONG' to 'GLfloat', possible loss of data
+  asteroidsGame.cpp
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2143: syntax error: missing ';' before '<'
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\stephen\documents\visual studio 2015\projects\gp1\gp1\csoundmgr.h(27): error C2238: unexpected token(s) preceding ';'
   Generating Code...

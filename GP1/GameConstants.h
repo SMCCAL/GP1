@@ -17,6 +17,7 @@
 #include "OpenAL\al.h"
 #include "OpenAL\alc.h"
 #include "OpenAL\alut.h"
+#include "cSoundMgr.h"
 // Font
 #include "FTGL\ftgl.h"
 // Maths functions

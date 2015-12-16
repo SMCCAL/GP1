@@ -57,6 +57,7 @@ void cRocket::update(float deltaTime)
 	{
 		spriteTranslation = -(glm::vec2(5.0f, 5.0f));
 	}
+	//removed sprite scaling as it was not needed
 	//if (m_InputMgr->isKeyDown(int('A')))
 	//{
 	//	spriteScaling += 0.2f;
